@@ -1,0 +1,101 @@
+
+> ai-travel-planner@1.0.0 dev:backend
+> npm run dev --workspace backend
+
+
+> ai-travel-planner-backend@1.0.0 dev
+> nodemon src/server.js
+
+[33m[nodemon] 3.1.14[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node src/server.js`[39m
+◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+API listening on port 5000
+[0mGET /api/health [32m200[0m 10.838 ms - 75[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+API listening on port 5000
+[0mGET /api/health [32m200[0m 12.348 ms - 74[0m
+[0mGET / [32m200[0m 30.263 ms - 65[0m
+[0mGET / [32m200[0m 0.777 ms - 65[0m
+[0mGET /api/health [32m200[0m 1.123 ms - 77[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+MongoDB connected: ac-0jn4lzy-shard-00-00.c91daaj.mongodb.net
+API listening on port 5000
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+MongoDB connected: ac-0jn4lzy-shard-00-00.c91daaj.mongodb.net
+API listening on port 5000
+[0mGET /api/auth/me [33m401[0m 7.016 ms - 1436[0m
+[0mGET /favicon.ico [33m404[0m 1.252 ms - 1454[0m
+[0mGET /api/auth/me [36m304[0m 87.686 ms - -[0m
+[0mGET /api/auth/me [36m304[0m 38.697 ms - -[0m
+[0mPOST /api/itineraries/generate [32m201[0m 4678.237 ms - 2574[0m
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+MongoDB connected: ac-0jn4lzy-shard-00-00.c91daaj.mongodb.net
+API listening on port 5000
+[0mPOST /api/itineraries/generate [32m201[0m 820.143 ms - 4286[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+MongoDB connected: ac-0jn4lzy-shard-00-00.c91daaj.mongodb.net
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+MongoDB connected: ac-0jn4lzy-shard-00-00.c91daaj.mongodb.net
+API listening on port 5000
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+MongoDB connected: ac-0jn4lzy-shard-00-00.c91daaj.mongodb.net
+API listening on port 5001
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+MongoDB connected: ac-0jn4lzy-shard-00-00.c91daaj.mongodb.net
+API listening on port 5000
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+MongoDB connected: ac-0jn4lzy-shard-00-00.c91daaj.mongodb.net
+API listening on port 5001
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+MongoDB connected: ac-0jn4lzy-shard-00-00.c91daaj.mongodb.net
+API listening on port 5000
+[0mGET /api/auth/me [36m304[0m 64.152 ms - -[0m
+[0mGET /api/auth/me [36m304[0m 31.583 ms - -[0m
+[0mGET /api/auth/me [36m304[0m 43.778 ms - -[0m
+[0mGET /api/auth/me [36m304[0m 34.701 ms - -[0m
+[0mGET /api/users/dashboard [32m200[0m 308.710 ms - 16453[0m
+[0mGET /api/users/dashboard [36m304[0m 97.587 ms - -[0m
+[0mGET /api/itineraries/saved [32m200[0m 150.219 ms - 4941[0m
+[0mGET /api/itineraries/saved [36m304[0m 229.232 ms - -[0m
+[0mGET /api/itineraries/history [32m200[0m 110.759 ms - 27036[0m
+[0mGET /api/itineraries/history [36m304[0m 69.157 ms - -[0m
+[0mGET /api/itineraries/favorites [32m200[0m 60.809 ms - 2632[0m
+[0mGET /api/itineraries/favorites [36m304[0m 65.561 ms - -[0m
+[0mGET /api/users/dashboard [32m200[0m 93.403 ms - 16453[0m
+[0mGET /api/users/dashboard [32m200[0m 103.261 ms - 16453[0m
+[0mPOST /api/itineraries/generate [32m201[0m 6631.129 ms - 2589[0m

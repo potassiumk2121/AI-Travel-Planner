@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 40% 98%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --primary: 173 80% 36%;
+  --primary-foreground: 180 100% 98%;
+  --secondary: 35 92% 55%;
+  --secondary-foreground: 28 46% 13%;
+  --muted: 210 30% 94%;
+  --muted-foreground: 215 16% 42%;
+  --accent: 346 84% 61%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 214 28% 88%;
+  --input: 214 28% 88%;
+  --ring: 173 80% 36%;
+}
+
+.dark {
+  --background: 224 33% 9%;
+  --foreground: 210 40% 98%;
+  --card: 224 28% 13%;
+  --card-foreground: 210 40% 98%;
+  --primary: 173 72% 45%;
+  --primary-foreground: 180 100% 8%;
+  --secondary: 35 90% 57%;
+  --secondary-foreground: 28 46% 13%;
+  --muted: 223 24% 18%;
+  --muted-foreground: 214 18% 72%;
+  --accent: 346 84% 64%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 223 18% 24%;
+  --input: 223 18% 24%;
+  --ring: 173 72% 45%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 8% 10%, rgba(20, 184, 166, 0.22), transparent 28rem),
+    radial-gradient(circle at 86% 12%, rgba(245, 158, 11, 0.18), transparent 24rem),
+    radial-gradient(circle at 70% 88%, rgba(244, 63, 94, 0.13), transparent 22rem),
+    hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.glass {
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+}
+
+.dark .glass {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(18, 25, 43, 0.72);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.26);
+}
+
+.text-balance {
+  text-wrap: balance;
+}

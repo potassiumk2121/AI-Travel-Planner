@@ -1,0 +1,21 @@
+{
+  "name": "ai-travel-planner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-ready full-stack AI travel planner with React, Express, MongoDB, Gemini, LangChain, n8n, Google Sheets, and email automation.",
+  "scripts": {
+    "dev": "npm run dev --workspace backend",
+    "dev:backend": "npm run dev --workspace backend",
+    "dev:frontend": "npm run dev --workspace frontend",
+    "build": "npm run build --workspace frontend",
+    "start": "npm run start --workspace backend",
+    "install:all": "npm install --workspaces"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}
