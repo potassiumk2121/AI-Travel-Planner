@@ -31,10 +31,11 @@ CORS CONFIGURATION
 */
 
 const allowedOrigins = [
-  "http://localhost:5174",
   "http://localhost:5173",
-
+  "http://localhost:5174",
+  "https://ai-travel-planner-frontend.vercel.app",
   "https://ai-travel-planner-frontend-pi.vercel.app",
+  "https://ai-travel-planner-frontend-771jir6j7.vercel.app",
   "https://ai-travel-planner-771jir6j7.vercel.app",
 ];
 
@@ -49,24 +50,40 @@ if (env.clientUrl) {
     });
 }
 
+const vercelPreviewPatterns = [
+  /^https:\/\/ai-travel-planner-frontend(?:-[a-z0-9-]+)?\.vercel\.app$/i,
+  /^https:\/\/ai-travel-planner(?:-[a-z0-9-]+)?\.vercel\.app$/i,
+];
+
+const isAllowedOrigin = (origin) =>
+  allowedOrigins.includes(origin) ||
+  vercelPreviewPatterns.some((pattern) => pattern.test(origin));
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Allow non-browser requests such as curl, Postman, and health checks.
+    if (!origin) {
+      return callback(null, true);
+    }
+
+    if (isAllowedOrigin(origin)) {
+      return callback(null, true);
+    }
+
+    console.warn(`CORS blocked for origin: ${origin}`);
+    return callback(null, false);
+  },
+
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  optionsSuccessStatus: 204,
+};
+
 app.use(
-  cors({
-    origin: function (origin, callback) {
-      // allow non-browser requests
-      if (!origin) {
-        return callback(null, true);
-      }
-
-      if (allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      }
-
-      return callback(new Error(`CORS blocked for origin: ${origin}`));
-    },
-
-    credentials: true,
-  })
+  cors(corsOptions)
 );
+app.options("*", cors(corsOptions));
 
 app.use(express.json({ limit: "1mb" }));
 app.use(express.urlencoded({ extended: true }));
