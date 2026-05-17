@@ -30,25 +30,15 @@ CORS CONFIGURATION
 ========================
 */
 
-const allowedOrigins = [
+const allowedOrigins = new Set([
   "http://localhost:5173",
   "http://localhost:5174",
   "https://ai-travel-planner-frontend.vercel.app",
   "https://ai-travel-planner-frontend-pi.vercel.app",
   "https://ai-travel-planner-frontend-771jir6j7.vercel.app",
   "https://ai-travel-planner-771jir6j7.vercel.app",
-];
-
-if (env.clientUrl) {
-  env.clientUrl
-    .split(",")
-    .map((origin) => origin.trim())
-    .forEach((origin) => {
-      if (origin && !allowedOrigins.includes(origin)) {
-        allowedOrigins.push(origin);
-      }
-    });
-}
+  ...env.corsOrigins,
+]);
 
 const vercelPreviewPatterns = [
   /^https:\/\/ai-travel-planner-frontend(?:-[a-z0-9-]+)?\.vercel\.app$/i,
@@ -56,7 +46,8 @@ const vercelPreviewPatterns = [
 ];
 
 const isAllowedOrigin = (origin) =>
-  allowedOrigins.includes(origin) ||
+  allowedOrigins.has("*") ||
+  allowedOrigins.has(origin) ||
   vercelPreviewPatterns.some((pattern) => pattern.test(origin));
 
 const corsOptions = {

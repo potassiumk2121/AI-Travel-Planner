@@ -19,3 +19,5 @@ services:
         sync: false
       - key: CLIENT_URL
         sync: false
+      - key: CORS_ORIGINS
+        value: https://ai-travel-planner-frontend-771jir6j7.vercel.app

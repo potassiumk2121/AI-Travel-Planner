@@ -149,3 +149,8 @@ API listening on port 5001
 [32m[nodemon] starting `node src/server.js`[39m
 MongoDB connected: ac-0jn4lzy-shard-00-00.c91daaj.mongodb.net
 API listening on port 5001
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+MongoDB connected: ac-0jn4lzy-shard-00-00.c91daaj.mongodb.net
+API listening on port 5001

@@ -26,25 +26,27 @@ Recommended production values:
 NODE_ENV=production
 JWT_SECRET=<long-random-secret>
 ALLOW_AI_FALLBACK=false
+CORS_ORIGINS=https://your-vercel-frontend.vercel.app
 ```
 
 ## Frontend on Vercel
 
 1. Create a new Vercel project.
 2. Set root directory to `frontend`.
-3. Build command:
+3. Set `VITE_API_URL` to your deployed backend API URL, for example `https://your-render-api.onrender.com/api`.
+4. Build command:
 
 ```bash
 npm run build
 ```
 
-4. Output directory:
+5. Output directory:
 
 ```text
 dist
 ```
 
-5. Add:
+6. Add:
 
 ```env
 VITE_API_URL=https://your-render-api.onrender.com/api
