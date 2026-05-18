@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/input";
 import { useToast } from "@/components/ui/toast";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 const starterMessages = [
   {
@@ -56,7 +58,7 @@ export const Chat = () => {
                   </span>
                 ) : null}
                 <div className={`max-w-[80%] rounded-lg px-4 py-3 text-sm ${message.role === "user" ? "bg-primary text-primary-foreground" : "bg-muted"}`}>
-                  {message.content}
+                  
                 </div>
                 {message.role === "user" ? (
                   <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-secondary/18 text-secondary-foreground">
